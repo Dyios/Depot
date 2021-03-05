@@ -1,0 +1,28 @@
+{
+  "name": "depot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsx-preprocessor": "npx babel --watch JSX --out-dir assets/js --presets react-app/prod"
+  },
+  "author": "TOLBA RAFIK",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/sortablejs": "^1.10.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "electron": "^8.2.0",
+    "electron-devtools-installer": "^3.1.1",
+    "mongodb": "^3.5.7"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-sortablejs": "^6.0.0",
+    "sortablejs": "^1.13.0"
+  },
+  "keywords": [],
+  "description": ""
+}

@@ -1,0 +1,22 @@
+.DesignationInBon_container {
+    display: flex;
+    border-width: 0px;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.buttons_container {
+    background-color: transparent
+}
+
+.button {
+    background-color: transparent
+}
+
+.remove_button {
+    width: auto;
+}
+
+input[type='button']:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+.page{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+form{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border-bottom: 2px solid #EBEBEB;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    height: 75vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    padding: 5rem 2rem 5rem 10rem;
+    border-radius: 0px 0px 20px 20px;
+    font-size: var(--text-size);
+}
+
+.info{
+    display: flex; 
+}
+
+.info label{
+    width: 15vw;
+}
+
+.info select, .autocomplete, #quantite{
+    margin-left: 5rem;
+}
+
+#designation{
+    width: 100%;
+    /*height: 100%;*/
+}
+
+#designation_change{
+    position: absolute;
+    left: 0%;
+    transform: scale(1.1);
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+#modifier-btn{
+    align-items: flex-end;
+    padding: 0px 3rem;
+}
+
+#categorie{
+    width: 20%;
+    text-indent: 15%;
+}
+
+#quantite{
+    width: 10%;
+    text-align: center;
+}
+
+.prix{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 6rem;
+    text-align: center;
+}
+
+.typePrix{
+    width: 20%;
+}
+
+.typePrix input{
+    width: 100%;
+    height: var(--text-size);
+    text-align: center;
+}
+
+.form-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.5rem;
+}
+
+.standard-btn{
+    margin: 0rem 2rem;
+}
