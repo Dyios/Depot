@@ -82,17 +82,17 @@ function Main() {
                 if (err) throw err;
                 var dbo = db.db("Magasin");
 
-                const prix_achat_tmp = prix_achat.replace(/\s/g, '');
+                /*const prix_achat_tmp = prix_achat.replace(/\s/g, '');
                 const prix_gros_tmp = prix_gros.replace(/\s/g, '');
-                const prix_detail_tmp = prix_detail.replace(/\s/g, '');
+                const prix_detail_tmp = prix_detail.replace(/\s/g, '');*/
                 dbo.collection("articles").updateOne({ designation: value },
                     {
                         $set: {
                             designation: value,
                             nbr_coli: parseInt(nbr_coli),
-                            prix_achat: parseFloat(prix_achat_tmp),
-                            prix_gros: parseFloat(prix_gros_tmp),
-                            prix_detail: parseFloat(prix_detail_tmp)
+                            prix_achat: parseFloat(prix_achat),
+                            prix_gros: parseFloat(prix_gros),
+                            prix_detail: parseFloat(prix_detail)
                         }
                     }, { upsert: true }, function (err, result) {
                         if (err) throw err
@@ -101,14 +101,7 @@ function Main() {
                         
             ${value}   |   (${nbr_coli})   |   ${prix_achat}   |   ${prix_gros}   |   ${prix_detail}`)
                     })
-                /*alert(` Article mis à jour :
-                    - encient
-                        (${result[0].nbr_coli})  ${result[0].designation}  ${result[0].prix_achat}  ${result[0].prix_gros}  ${result[0].prix_detail}
-                    - nouveau
-                        (${nbr_coli})  ${value}  ${prix_achat}  ${prix_gros}  ${prix_detail}`)*/
-
-                /*alert(` Article ajouter :
-                (${nbr_coli})  ${value}  ${prix_achat}  ${prix_gros}  ${prix_detail}`)*/
+                    
                 db.close()
             });
         }
